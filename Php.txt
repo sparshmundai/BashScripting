@@ -1,0 +1,31 @@
+Installation
+1.sudo su
+2.apt-get update -y
+3.apt-get install mysql-server -y && apache2 -y
+4.apt-get install php -y && phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
+
+Php My Admin Configure:
+1.sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+2.sudo a2enconf phpmyadmin.conf
+3.sudo systemctl restart apache2
+
+Phpmyadmin Login user and password creation:
+1.mysql -u root -p 
+or 
+sudo mysql (before password and user creation)
+
+2.ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'new_password';
+
+Create Database
+1.Same Name as sql name
+2.Import table from .sql file
+
+
+Clone git
+1.git clone htttp...git.
+2.cd /var/www/html/
+3.systemctl restart apache2
+
+Update db.php password
+1.Password of root
+2.systemctl restart apache2
